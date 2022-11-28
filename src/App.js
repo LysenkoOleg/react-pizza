@@ -8,8 +8,6 @@ import PizzaBlock from "./components/PizzaBlock";
 import "./scss/app.scss";
 import pizzas from "./assets/pizzas.json";
 
-console.log(pizzas);
-
 function App() {
   return (
     <div className="App">
@@ -24,7 +22,7 @@ function App() {
             <h2 className="content__title">Все пиццы</h2>
             <div className="content__items">
               {pizzas.map((obj) => {
-                return <PizzaBlock {...obj} />;
+                return <PizzaBlock {...obj} key={obj.id} />;
               })}
             </div>
           </div>
